@@ -1,0 +1,59 @@
+.sar-narrative {
+  width: 380px; /* Reduced width - adjust as needed */
+  height: 500px; /* Fixed height - adjust as needed */
+  background-color: #e6ecf2;
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 0; /* Removed extra margin */
+  position: sticky;
+  top: 20px; /* Distance from top */
+  /* border: 1px solid #d0d7e0; Optional border */
+}
+
+.sar-narrative h4 {
+  margin: 0 0 15px 0; /* Top, Right, Bottom, Left margins */
+  color: #1d2b43; /* Header text color */
+  font-size: 16px; /* Header font size */
+}
+
+.sar-content {
+  flex: 1; /* Takes remaining space */
+  padding: 12px; /* Inner spacing */
+  line-height: 1.5; /* Text line spacing */
+  overflow-y: auto; /* Vertical scroll if needed */
+  background: white; /* Content background */
+  border-radius: 6px; /* Rounded corners */
+  white-space: pre-line; /* Preserves line breaks */
+  font-size: 14px; /* Content font size */
+  /* box-shadow: inset 0 1px 3px rgba(0,0,0,0.1); Optional inner shadow */
+}
+
+/* Scrollbar styling (visible when content overflows) */
+.sar-content::-webkit-scrollbar {
+  width: 6px; /* Scrollbar width */
+}
+
+.sar-content::-webkit-scrollbar-thumb {
+  background: #c1c1c1; /* Scrollbar color */
+  border-radius: 3px; /* Rounded scrollbar */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .sar-narrative {
+    width: 320px; /* Smaller width for medium screens */
+    height: 450px; /* Slightly reduced height */
+  }
+}
+
+@media (max-width: 992px) {
+  .sar-narrative {
+    width: 280px; /* Even smaller for tablets */
+    height: 400px;
+    position: relative; /* Stops sticky behavior on small screens */
+    top: auto;
+    margin-top: 20px; /* Adds space when stacked */
+  }
+}
